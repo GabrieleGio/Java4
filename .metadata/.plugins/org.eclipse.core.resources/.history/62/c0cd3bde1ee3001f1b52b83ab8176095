@@ -1,0 +1,5 @@
+package com.spring.base.entity;
+
+public class Utente {
+
+}

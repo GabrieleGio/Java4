@@ -1,0 +1,5 @@
+package com.spring.base.controller;
+
+public class UtenteController {
+
+}
