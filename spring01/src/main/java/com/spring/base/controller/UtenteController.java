@@ -24,5 +24,9 @@ public class UtenteController {
 		return new Utente(id,"anna","bianchi","anna","111",1998);
 	}
 	
+	@GetMapping(path="/modifica/{id}", produces = "application/json")
+	public Utente modificaPass(@PathVariable int id, String password) {
+		return new Utente(id,"anna","bianchi","anna",password,1998);
+	}
 	
 }
