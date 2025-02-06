@@ -7,4 +7,9 @@
     <fullyQualifiedTypeName name="com.spring.base.entity.Utente"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.spring.utente.dao.DAOUtente"/>
+    <fullyQualifiedTypeName name="com.spring.utente.dto.UtenteDTO.Utente"/>
+    <fullyQualifiedTypeName name="com.spring.utente.dto.UtenteDTO"/>
+    <fullyQualifiedTypeName name="com.spring.utente.utility.Conversioni"/>
+    <fullyQualifiedTypeName name="com.spring.utente.entity.Utente"/>
 </qualifiedTypeNameHistroy>

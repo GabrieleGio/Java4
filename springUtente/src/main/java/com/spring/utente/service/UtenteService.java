@@ -7,7 +7,12 @@ import com.spring.utente.dao.DAOUtente;
 import com.spring.utente.dto.UtenteDTO;
 import com.spring.utente.entity.Utente;
 import com.spring.utente.utility.Conversioni;
-
+// da aggiungere:
+// cancellazione utente tramite id
+// modifica password tramite id
+// modifica totale di un utente, passando l'utente per intero
+// mostra i nomi di tutti gli utenti
+// mostra nomi e cognomi di tutti gli utenti
 public class UtenteService {
 	
 	// questo costruttore crea la mappa vuota di utenti
@@ -40,5 +45,39 @@ public class UtenteService {
 			listaDto.add(dto);
 		}
 		return listaDto;
+	}
+	
+	//new
+	public void cancellaPerId(int id) {
+		dao.delete(id);
+	}
+	//new
+	public UtenteDTO modificaPassword(int id, String newPass) {
+		Utente utente = dao.updatePassword(id, newPass);
+		return Conversioni.daUtenteAUtenteDTO(utente);
+	}
+	//new
+	public UtenteDTO modificaUtente(UtenteDTO dto) {
+		Utente utente = Conversioni.daUtenteDTOAUtente(dto);
+		utente = dao.update(utente);
+		return Conversioni.daUtenteAUtenteDTO(utente);
+	}
+	//new
+	public List<String> mostraNomi() {
+		List<Utente> lista = dao.selectAll();
+		List<String> nomi = new ArrayList<>();
+		for (Utente utente : lista) {
+			nomi.add(utente.getNome());
+		}
+		return nomi;
+	}
+	//new
+	public List<String> mostraNomiCognomi() {
+		List<Utente> lista = dao.selectAll();
+		List<String> nomiCognomi = new ArrayList<>();
+		for (Utente utente : lista) {
+			nomiCognomi.add(utente.getNome() + " " + utente.getCognome());
+		}
+		return nomiCognomi;
 	}
 }

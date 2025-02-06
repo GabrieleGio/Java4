@@ -2589,3 +2589,85 @@ java.util.concurrent.TimeoutException
 
 !ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-02-06 18:22:54.160
 !MESSAGE [C4E] Theme: {"--background2":"#f2f2f2","--border":"#dfdfdf","--foreground":"#2e3436","--image":"#202020","--background1":"#ffffff","--code-font":"Monospace","--code-font-size":"12px","--disabled":"gray","--code-background":"#2C2F32","--font":"Cantarell","--font-size":"12px","--code":"darkviolet"}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-02-06 18:56:31.613
+!MESSAGE Classpath changed for project: springUtente
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-02-06 19:21:56.430
+!MESSAGE [C4E] Internal server stopped: Server@7b360a96{STOPPED}[10.0.20,sto=0]
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-02-06 19:21:56.431
+!MESSAGE [C4E] Internal server stopped: true
+!SESSION 2025-02-06 19:22:06.621 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-02-06 19:22:08.822
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-02-06 19:22:13.008
+!MESSAGE Logback config file: /home/user/Scrivania/Java4/Programmi/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-02-06 19:22:13.331
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-02-06 19:22:13.331
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-02-06 19:22:13.564
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-02-06 19:22:13.564
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-02-06 19:22:16.337
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/usr/lib/jvm/jdk-21.0.4-oracle-x64/bin/java
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=/home/user/Scrivania/Java4/Programmi/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1738866136337
+-Dlanguageserver.hover-timeout=225
+-jar
+/home/user/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.springframework.tooling.boot.ls_1.59.0.202411281450/servers/spring-boot-language-server/spring-boot-language-server-1.59.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-02-06 19:22:16.338
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-02-06 19:22:16.344
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 28041
+
+!ENTRY com.genuitec.copilot4eclipse 1 0 2025-02-06 19:22:17.073
+!MESSAGE [C4E] Copilot API proxy: native mode
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-02-06 19:22:17.371
+!MESSAGE Boot project ADDED: spring01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-02-06 19:22:17.371
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-02-06 19:22:17.371
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-02-06 19:22:17.371
+!MESSAGE Boot project ADDED: springUtente
+
+!ENTRY com.genuitec.copilot4eclipse 1 0 2025-02-06 19:22:19.076
+!MESSAGE Starting Copilot4Eclipse
+
+!ENTRY com.genuitec.copilot4eclipse 2 0 2025-02-06 19:22:21.512
+!MESSAGE Timeout while checking Copilot status
+
+!ENTRY com.genuitec.copilot4eclipse 1 0 2025-02-06 19:22:21.527
+!MESSAGE [C4E] Preconditions Checks(status: ok, results: [Result(
+type: chat_enabled,
+ status: ok,
+ details: [
+
+])])

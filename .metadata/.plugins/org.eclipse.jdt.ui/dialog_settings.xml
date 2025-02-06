@@ -26,8 +26,8 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="83"/>
-		<item key="DIALOG_Y_ORIGIN" value="130"/>
+		<item key="DIALOG_X_ORIGIN" value="248"/>
+		<item key="DIALOG_Y_ORIGIN" value="138"/>
 		<item key="DIALOG_WIDTH" value="712"/>
 		<item key="DIALOG_HEIGHT" value="766"/>
 		<item key="DIALOG_FONT_NAME" value="1|Cantarell|11.0|0|GTK|1|"/>

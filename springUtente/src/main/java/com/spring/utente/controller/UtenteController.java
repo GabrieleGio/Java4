@@ -31,4 +31,32 @@ public class UtenteController {
 	public List<UtenteDTO> mostraTutti(){
 		return service.mostraTutti();
 	}
+	
+	//new
+	@GetMapping(path="/cancella/{id}")
+	public void cancellaPerId(@PathVariable int id) {
+		service.cancellaPerId(id);
+	}
+	
+	//new (da sistemare?)
+	@GetMapping(path="/modificaPassword/{id}{newPass}", produces="application/json")
+	public UtenteDTO modificaPassword(@PathVariable int id, @PathVariable String newPass) {
+        return service.modificaPassword(id, newPass);
+	}
+	
+	//new
+	@GetMapping(path="/modificaUtente", consumes="application/json")
+	public UtenteDTO modificaUtente(@RequestBody UtenteDTO dto) {
+		return service.modificaUtente(dto);
+	}
+	//new
+	@GetMapping(path="/mostraNomi", produces="application/json")
+	public List<String> mostraNomi() {
+		return service.mostraNomi();
+	}
+	//new
+	@GetMapping(path="/mostraNomiCognomi", produces="application/json")
+	public List<String> mostraNomiCognomi() {
+		return service.mostraNomiCognomi();
+	}
 }
