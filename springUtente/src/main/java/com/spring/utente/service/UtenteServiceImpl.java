@@ -3,6 +3,9 @@ package com.spring.utente.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.spring.utente.dao.DAOUtente;
 import com.spring.utente.dto.UtenteDTO;
 import com.spring.utente.entity.Utente;
@@ -13,10 +16,13 @@ import com.spring.utente.utility.Conversioni;
 // modifica totale di un utente, passando l'utente per intero
 // mostra i nomi di tutti gli utenti
 // mostra nomi e cognomi di tutti gli utenti
-public class UtenteService {
+@Service
+public class UtenteServiceImpl implements UtenteService{
 	
 	// questo costruttore crea la mappa vuota di utenti
-	private DAOUtente dao = new DAOUtente();
+	
+	@Autowired
+	private DAOUtente dao;
 	
 	public void registra(UtenteDTO dto) {
 		// trasformo da dto a entity
@@ -54,13 +60,22 @@ public class UtenteService {
 	//new
 	public UtenteDTO modificaPassword(int id, String newPass) {
 		Utente utente = dao.updatePassword(id, newPass);
-		return Conversioni.daUtenteAUtenteDTO(utente);
+		if (utente != null) {
+			return Conversioni.daUtenteAUtenteDTO(utente);
+		}
+		return null;
 	}
 	//new
 	public UtenteDTO modificaUtente(UtenteDTO dto) {
+		// trasformo
 		Utente utente = Conversioni.daUtenteDTOAUtente(dto);
+		// aggiorno
 		utente = dao.update(utente);
-		return Conversioni.daUtenteAUtenteDTO(utente);
+		if (utente != null) {
+			// trasformo di nuovo
+			return Conversioni.daUtenteAUtenteDTO(utente);
+		}
+		return null;
 	}
 	//new
 	public List<String> mostraNomi() {

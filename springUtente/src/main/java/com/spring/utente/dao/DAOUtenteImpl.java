@@ -10,8 +10,8 @@ import org.springframework.stereotype.Repository;
 import com.spring.utente.entity.Utente;
 
 
-
-public class DAOUtente {
+@Repository
+public class DAOUtenteImpl implements DAOUtente {
 
 private Map<Integer, Utente> mappa = new HashMap<>();
 

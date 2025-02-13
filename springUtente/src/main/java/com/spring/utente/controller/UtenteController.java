@@ -2,6 +2,7 @@ package com.spring.utente.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +16,8 @@ import com.spring.utente.service.UtenteService;
 @RequestMapping(path="/servizi")
 public class UtenteController {
 	
-	private UtenteService service = new UtenteService();
+	@Autowired
+	private UtenteService service;
 	
 	@GetMapping(path="/registra", consumes="application/json")
 	public void registra(@RequestBody UtenteDTO dto) {
@@ -39,13 +41,13 @@ public class UtenteController {
 	}
 	
 	//new (da sistemare?)
-	@GetMapping(path="/modificaPassword/{id}{newPass}", produces="application/json")
-	public UtenteDTO modificaPassword(@PathVariable int id, @PathVariable String newPass) {
+	@GetMapping(path="/modificaPassword/{id}", produces="application/json")
+	public UtenteDTO modificaPassword(@PathVariable int id, String newPass) {
         return service.modificaPassword(id, newPass);
 	}
 	
 	//new
-	@GetMapping(path="/modificaUtente", consumes="application/json")
+	@GetMapping(path="/modificaUtente", consumes="application/json", produces="application/json")
 	public UtenteDTO modificaUtente(@RequestBody UtenteDTO dto) {
 		return service.modificaUtente(dto);
 	}
